@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "events": "Events",
+    "workflows": "Workflows",
+    "audit": "Audit",
+    "tenants": "Tenants",
+    "settings": "Settings"
+  },
+  "actions": {
+    "view": "View",
+    "filter": "Filter",
+    "export": "Export",
+    "refresh": "Refresh",
+    "search": "Search",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "retry": "Retry"
+  },
+  "status": {
+    "pending": "Pending",
+    "running": "Running",
+    "processing": "Processing",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "success": "Success",
+    "info": "Info",
+    "warning": "Warning",
+    "error": "Error",
+    "critical": "Critical"
+  },
+  "table": {
+    "noResults": "No results found",
+    "loading": "Loading…",
+    "page": "Page {{page}} of {{total}}"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "notFound": "Not found",
+    "unauthorized": "You are not authorized to view this page."
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "email": "Email",
+    "password": "Password",
+    "signingIn": "Signing in…"
+  }
+}

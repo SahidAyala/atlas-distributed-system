@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  platform-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder        # Use the builder stage for hot-reload dev
+    image: atlas-platform-ui:dev
+    container_name: atlas-platform-ui
+    ports:
+      - '5173:5173'
+    environment:
+      # VITE_ vars: embedded in the bundle at dev-server startup
+      - VITE_API_BASE_URL=/api
+      - VITE_APP_NAME=Atlas IaaS
+      - VITE_ENABLE_DEVTOOLS=true
+      # Proxy targets: read by vite.config.ts at Node.js process level (not exposed to browser)
+      # host.docker.internal resolves to the host machine from inside the container (Mac/Windows)
+      - API_TARGET=http://host.docker.internal:3000
+      - EVENT_TARGET=http://host.docker.internal:8080
+    volumes:
+      # Mount source for HMR — node_modules stays inside the container
+      - .:/app
+      - /app/node_modules
+    command: pnpm dev --host 0.0.0.0 --port 5173
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://localhost:5173']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # Production build preview — swap target to `server` and run `pnpm build` first
+  platform-ui-preview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: server
+    image: atlas-platform-ui:prod
+    container_name: atlas-platform-ui-preview
+    ports:
+      - '8080:80'
+    profiles:
+      - preview

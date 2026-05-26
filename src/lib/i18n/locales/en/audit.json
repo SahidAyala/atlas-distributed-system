@@ -1,0 +1,21 @@
+{
+  "title": "Audit Log",
+  "description": "Immutable record of all actor actions across the platform.",
+  "columns": {
+    "action": "Action",
+    "resource": "Resource",
+    "actor": "Actor",
+    "tenant": "Tenant",
+    "ip": "IP Address",
+    "createdAt": "Timestamp"
+  },
+  "filters": {
+    "action": "Action",
+    "resource": "Resource",
+    "actor": "Actor"
+  },
+  "changes": {
+    "before": "Before",
+    "after": "After"
+  }
+}

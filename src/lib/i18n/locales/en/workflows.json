@@ -1,0 +1,23 @@
+{
+  "title": "Workflow Executions",
+  "description": "Monitor and inspect workflow execution history.",
+  "columns": {
+    "id": "Execution ID",
+    "workflow": "Workflow",
+    "status": "Status",
+    "triggeredBy": "Triggered By",
+    "tenant": "Tenant",
+    "duration": "Duration",
+    "startedAt": "Started"
+  },
+  "steps": {
+    "title": "Execution Steps",
+    "duration": "{{duration}}",
+    "error": "Error Details",
+    "output": "Output"
+  },
+  "filters": {
+    "status": "Status",
+    "workflow": "Workflow"
+  }
+}

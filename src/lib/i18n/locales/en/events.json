@@ -1,0 +1,22 @@
+{
+  "title": "Events",
+  "description": "Real-time event stream from all Atlas services.",
+  "columns": {
+    "id": "ID",
+    "type": "Type",
+    "source": "Source",
+    "severity": "Severity",
+    "status": "Status",
+    "tenant": "Tenant",
+    "createdAt": "Created"
+  },
+  "filters": {
+    "severity": "Severity",
+    "status": "Status",
+    "source": "Source"
+  },
+  "detail": {
+    "payload": "Payload",
+    "correlation": "Correlation ID"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "generic": "Something went wrong. Please try again.",
+  "notFound": "Not found",
+  "unauthorized": "You are not authorized to view this page.",
+  "forbidden": "You do not have permission to perform this action.",
+  "network": "Network error. Check your connection and try again.",
+  "timeout": "Request timed out. Please try again.",
+  "validation": "Please fix the errors in the form and try again."
+}
